@@ -36,7 +36,7 @@ namespace WebAPI_Demo
                 options.UseSqlServer(Configuration.GetConnectionString("serverName"));
                 });
             services.AddMediatR(typeof(Program));
-            services.AddScoped<IAuthorServices, AuthorServices>();
+            services.AddScoped<IAuthorServices, AuthorServicesADO>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
